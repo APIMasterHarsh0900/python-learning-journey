@@ -7,3 +7,4 @@ def max_element(arr):
         if num > max_val:
             max_val = num  # Update max_val if a larger number is found
     return max_val  # Return the maximum value found
+print(max_element([1,3,5,9,7]))
