@@ -6,3 +6,6 @@ from Package.maths import sum, product, difference
 print(sum(5, 3))
 print(product(5, 3))
 print(difference(5, 3))
+###File and directory access and management
+import os
+print(os.getcwd())

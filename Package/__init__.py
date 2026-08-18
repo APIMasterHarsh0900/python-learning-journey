@@ -1,0 +1,1 @@
+'''It is a special python file which is used to make a directory as a package. It can be an empty file or it can contain the initialization code for the package.'''
