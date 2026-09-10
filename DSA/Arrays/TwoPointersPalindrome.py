@@ -26,3 +26,24 @@ def reverse_list(lst):
         j=j-1
     return lst
 print(reverse_list([1,2,3,4,5]))
+
+def is_palindrome(s):
+    s = s.lower()
+
+    new_s = ""
+
+    for char in s:
+        if char.isalnum():
+            new_s += char
+
+    i = 0
+    j = len(new_s) - 1
+
+    while i < j:
+        if new_s[i] != new_s[j]:
+            return False
+
+        i += 1
+        j -= 1
+
+    return True
