@@ -18,5 +18,23 @@ def print_numbers(n):
     print_numbers(n-1)
 print_numbers(5)
 
-"Thus the recurion in problem solving is dividing the problem in smaller poration and then solve the big problem with its smaller parts solutions"
+"Thus the recurion in problem solving is dividing the problem in smaller portion and then solve the big problem with its smaller parts solutions"
 
+def sum(n):
+   if n==1:
+       return 1
+   smallans=sum(n-1)
+   ans=n+smallans
+   return ans
+print(sum(5))
+
+### Problem to find the number of digits in a number using recursion
+def count_digits(n):
+   if(n>=1 and n<=9):
+       return 1
+   smallNum= int(n/10)
+   smallans=count_digits(smallNum)
+   ans=1+smallans
+   return ans
+print(count_digits(12345))  
+print(count_digits(1234567890))
