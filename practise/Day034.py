@@ -55,3 +55,29 @@ with open("application.log", "r") as file:
         if "Error" in line:
             error_count=error_count+1
 print("Total error logs found:", error_count)
+
+## Finding a maximum element in a list
+numbers = [1, 5, 3, 9, 2]
+max_number = max(numbers)
+print("The maximum number is:", max_number)
+
+def max_element(lst):
+    if not lst:
+        return None
+    max_num= lst[0]
+    for num in lst:
+        if num>max_num:
+            max_num=num
+    return max_num
+print(max_element([1, 5, 3, 9, 2]))
+
+with open("app.log", "r") as file:
+    for line in file:
+        try:
+            # Process the line
+            process_line(line)
+
+        except ValueError as e:
+            print(f"Malformed line skipped: {line.strip()}")
+            print(f"Error: {e}")
+            continue
