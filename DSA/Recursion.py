@@ -38,3 +38,14 @@ def count_digits(n):
    return ans
 print(count_digits(12345))  
 print(count_digits(1234567890))
+
+#### Problem to find the sum of digits in a number using recursion
+def sum_of_digits(n):
+    if(n>=1 and n<=9):
+         return n
+    if (n==0):
+        return 0
+    smallans= sum_of_digits(n//10)
+    ans=n%10+smallans
+    return ans
+print(sum_of_digits(12345))
