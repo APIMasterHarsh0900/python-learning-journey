@@ -49,3 +49,11 @@ def sum_of_digits(n):
     ans=n%10+smallans
     return ans
 print(sum_of_digits(12345))
+###### Problem to find the power of a number using recursion
+def power(base,exp):
+    if (exp==0):
+        return 1
+    small_ans=power(base,exp-1)
+    ans=base*small_ans
+    return ans
+print(power(2,5))
